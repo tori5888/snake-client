@@ -15,19 +15,22 @@ const setupInput = (conn) => {
 };
 
 const handleUserInput = function (data) {
-  if (data === 'w') {
-    connection.write("Move: up");
-  } else if (data === 'a') {
-    connection.write("Move: left");
-  } else if (data === 's') {
-    connection.write("Move: down");
-  } else if (data === 'd') {
-    connection.write("Move: right");
+  const specialKeys = {
+    'w': "Move: up",
+    'a': "Move: left",
+    's': "Move: down",
+    'd': "Move: right",
+    '1': "Say: ❤️❤️❤️❤️❤️",
+    '2': "Say: RARARARARARARW",
+    '3': "Say: Oop SkKSKSks",
+    '\u0003': process.exit
+  };
+
+  if (specialKeys[data]) {
+    connection.write(specialKeys[data]); // Send the special key command to the server
   } else if (data === '\u0003') {
-    process.exit();
+    process.exit(); // Exit the process if CTRL + C is pressed
   }
 };
-
-
 
 module.exports = {  setupInput,};

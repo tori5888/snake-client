@@ -15,6 +15,13 @@ const connect = () => {
     console.log("Received data:", data);
   });
 
+  // Event listener for successful connection
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server!");
+    // Send "Name: TORI" to the server
+    conn.write("Name: TORI");
+  });
+
   return conn;
 };
 

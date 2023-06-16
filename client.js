@@ -29,4 +29,4 @@ console.log("Connecting ...");
 connect();
 
 // Export the connect function
-module.exports = connect;
+module.exports = { connect} ;

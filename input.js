@@ -1,6 +1,7 @@
 // Stores the active TCP connection object.
 let connection;
 
+// Setup input from stdin
 const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
@@ -14,6 +15,7 @@ const setupInput = (conn) => {
   return stdin;
 };
 
+// Handle user input
 const handleUserInput = function (data) {
   const specialKeys = {
     'w': "Move: up",
@@ -33,4 +35,6 @@ const handleUserInput = function (data) {
   }
 };
 
-module.exports = {  setupInput,};
+module.exports = {
+  setupInput,
+};

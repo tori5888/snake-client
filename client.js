@@ -2,14 +2,14 @@
 const net = require("net");
 const { IP, PORT } = require("./constants");
 
-// establishes a connection with the game server
+// Establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
     host: IP,
     port: PORT,
   });
 
-  // interpret incoming data as text
+  // Set the encoding to interpret incoming data as text
   conn.setEncoding("utf8");
 
   // Event listener for incoming data
@@ -19,7 +19,7 @@ const connect = function () {
 
   // Event listener for successful connection
   conn.on("connect", () => {
-    console.log("Successfully connected to game server!");
+    console.log("Successfully connected to the game server!");
     conn.write("Name: TORI"); // Send player name to the server
   });
 
@@ -29,4 +29,4 @@ const connect = function () {
 console.log("Connecting ...");
 connect();
 
-module.exports = { connect } ;
+module.exports = { connect };

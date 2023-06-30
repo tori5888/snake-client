@@ -16,6 +16,9 @@ Before you can run this client, you will need to be running the server side whic
 ## Getting Started
 
 1 - Follow steps inside the snek server repo to run the server side, which can be accessed here [https://github.com/tori5888/snek-multiplayer]
+
 2 - run "npm run play" in the Terminal to start snek-multiplayer
+
 3 -  Run the development snake client using the `node play.js` command.
+
 4 - Enjoy!

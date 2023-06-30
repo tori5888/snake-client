@@ -25,7 +25,6 @@ const handleUserInput = function (data) {
     '1': "Say: ❤️❤️❤️❤️❤️",
     '2': "Say: RARARARARARARW",
     '3': "Say: Oop SkKSKSks",
-    '\u0003': process.exit
   };
 
   if (specialKeys[data]) {
